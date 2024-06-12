@@ -4,13 +4,52 @@
 
 body {
     margin: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav {
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: 500;
     height: 70px;
     display: flex;
     padding: 20px 36px;
     box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins';
+}
+
+section {
+    padding: 20px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-photo {
+    max-width: 400px;
+    align-self: center;
+}
+
+.hero--header {
+    margin-bottom: 16px;
+}
+
+.hero--body {
+    margin-top: 0;
+}
+
+.card {
+    width: 175px;
+    font-size: 0.75rem;
+}
+
+.card--image {
+    width: 100%;
+    border-radius: 9px;
+}
+
+.card--stats {
+    display: flex;
+    align-items: center;
 }
