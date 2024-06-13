@@ -1,18 +1,25 @@
 import React from 'react'
 
-const Card = () => {
-  return (
-    <div className='card'>
-         <img src='../assets/IMG_3675.jpg' className='card--image'/>
-         <div className='card--stats'>
-            <span>5.0</span>
-            <span>(6),</span>
-            <span>Singapore</span>
-         </div>
-         <p>Sheares Band Yippee</p>
-         <p>From $20 / person</p>
-    </div>
-  )
+const Card = ({ img, rating, reviewCount, country, title, price, openSpots }) => {
+    let badgeText
+    if (openSpots === 0) {
+        badgeText = "SOLD OUT"
+    } else if (country === "Online") {
+        badgeText = "ONLINE"
+    }
+    return (
+        <div className='card'>
+            {badgeText && <div className='card--badge'>{badgeText}</div>}
+            <img src={img} className='card--image' />
+            <div className='card--stats'>
+                <span>{rating}</span>
+                <span>({reviewCount}),</span>
+                <span>{country}</span>
+            </div>
+            <p>{title}</p>
+            <p>From ${price} / person</p>
+        </div>
+    )
 }
 
 export default Card

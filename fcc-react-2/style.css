@@ -42,6 +42,10 @@ section {
 .card {
     width: 175px;
     font-size: 0.75rem;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 
 .card--image {
@@ -52,4 +56,14 @@ section {
 .card--stats {
     display: flex;
     align-items: center;
+}
+
+.card--badge {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    background-color: white;
+    padding: 5px 7px;
+    border-radius: 2px;
+    font-weight: bold;
 }
